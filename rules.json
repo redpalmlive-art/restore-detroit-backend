@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "last_verified": null,
+    "note": "Starter rules. Thresholds and program details are NOT verified. Check each one against the official source and set \"verified\" to true, then update this file, before real users rely on it."
+  },
+  "fpl": {
+    "year": 2025,
+    "base": 15650,
+    "per_additional": 5500,
+    "note": "Federal poverty guideline for the 48 contiguous states. Update each year."
+  },
+  "urgency": {
+    "high_years_delinquent": 2
+  },
+  "remedies": [
+    {
+      "id": "foreclosure_contact",
+      "name": "Contact the Wayne County Treasurer about foreclosure risk",
+      "priority": 0,
+      "conditions": { "requires_tax_owed": true, "min_years_delinquent": 2 },
+      "summary": "Property taxes that stay unpaid for multiple years can lead to foreclosure. The sooner you reach out, the more options you usually have.",
+      "how_to_apply": "Call or visit the Wayne County Treasurer's office and ask about your exact deadlines and options.",
+      "deadline_note": "Deadlines are firm. Ask for your specific dates.",
+      "source_url": "https://www.waynecountytreasurermi.com",
+      "verified": false
+    },
+    {
+      "id": "hptap",
+      "name": "Homeowners Property Tax Assistance Program (HPTAP)",
+      "priority": 1,
+      "conditions": {
+        "owner_occupied": true,
+        "requires_tax_owed": true,
+        "max_income_pct_fpl": 150
+      },
+      "summary": "Help for eligible lower-income homeowners with past-due property taxes.",
+      "how_to_apply": "Confirm the current application process and required documents (ID, proof of income, tax bill) with the official program office before applying.",
+      "deadline_note": "Funding and application windows can change. Confirm current dates.",
+      "source_url": "https://detroitmi.gov",
+      "verified": false
+    },
+    {
+      "id": "poverty_exemption",
+      "name": "Poverty / hardship property tax exemption",
+      "priority": 2,
+      "conditions": { "owner_occupied": true, "max_income_pct_fpl": 150 },
+      "summary": "Lower-income homeowners may be able to have some or all of their property tax reduced or exempted.",
+      "how_to_apply": "Ask the city assessor's office and the Board of Review how to file, and what income proof they require.",
+      "deadline_note": "Filing windows are short and set each year. Confirm the current dates.",
+      "source_url": "https://detroitmi.gov",
+      "verified": false
+    },
+    {
+      "id": "payment_plan",
+      "name": "Payment plan for past-due taxes",
+      "priority": 3,
+      "conditions": { "requires_tax_owed": true },
+      "summary": "A payment plan lets you pay what you owe in installments instead of all at once.",
+      "how_to_apply": "Contact the Wayne County Treasurer and ask about current payment plan terms and down payment.",
+      "deadline_note": "Missing payments can cancel a plan. Ask what happens if you fall behind.",
+      "source_url": "https://www.waynecountytreasurermi.com",
+      "verified": false
+    },
+    {
+      "id": "assessment_appeal",
+      "name": "Appeal your assessed value (Board of Review)",
+      "priority": 4,
+      "conditions": { "requires_assessment_disputed": true },
+      "summary": "If your home's assessed value seems too high, you can ask the Board of Review to lower it, which can lower future tax bills.",
+      "how_to_apply": "Gather comparable sales and photos of the home's condition, then ask the city assessor's office how to file an appeal.",
+      "deadline_note": "Appeal windows are short and fixed each year. Check the current dates right away.",
+      "source_url": "https://detroitmi.gov",
+      "verified": false
+    },
+    {
+      "id": "pre",
+      "name": "Principal Residence Exemption (PRE)",
+      "priority": 5,
+      "conditions": { "owner_occupied": true },
+      "summary": "Owner-occupied homes may qualify for an exemption from certain school operating taxes. Make sure yours is on file.",
+      "how_to_apply": "Ask the city assessor's office to confirm whether an exemption is on file for your home and how to file if not.",
+      "deadline_note": "Filing deadlines apply. Confirm the current ones.",
+      "source_url": "https://detroitmi.gov",
+      "verified": false
+    }
+  ]
+}
